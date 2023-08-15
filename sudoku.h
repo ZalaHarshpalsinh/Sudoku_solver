@@ -20,20 +20,21 @@ private:
     long long int *column_bits;
     long long int *sub_grid_bits;
     sui size;
-    sui find_sub_grid_index(const sui &row, const sui &col) const;
     bool my_eof;
 
 public:
     Sudoku_grid(sui size);
+    ~Sudoku_grid();
     void read_input_grid(const char *input_file);
     void print_sudoku_grid(const char *output_file);
-    bool solve();
-    void add_num_in_grid(const sui &row, const sui &col, const sui &num);
-    void remove_num_from_grid(const sui &row, const sui &col, const sui &num);
     bool find_empty_cell_in_grid(sui &row, sui &col);
     bool is_in_row(const sui &row, const sui &num) const;
     bool is_in_col(const sui &col, const sui &num) const;
     bool is_in_sub_grid(const sui &index, const sui &num) const;
+    sui find_sub_grid_index(const sui &row, const sui &col) const;
+    void add_num_in_grid(const sui &row, const sui &col, const sui &num);
+    bool solve();
+    void remove_num_from_grid(const sui &row, const sui &col, const sui &num);
 };
 
 class Sudoku_exception : public exception

@@ -9,6 +9,14 @@ Sudoku_grid::Sudoku_grid(sui size) : size(size), my_eof(false)
     sub_grid_bits = new long long int[size]{0};
 }
 
+Sudoku_grid::~Sudoku_grid()
+{
+    delete[] grid;
+    delete[] row_bits;
+    delete[] column_bits;
+    delete[] sub_grid_bits;
+}
+
 void Sudoku_grid::read_input_grid(const char *input_file)
 {
     ifstream fin(input_file);
