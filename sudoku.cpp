@@ -2,6 +2,7 @@
 
 Sudoku_grid::Sudoku_grid(sui size) : size(size), my_eof(false)
 {
+
     grid = new sui[size * size]{0};
     row_bits = new long long int[size]{0};
     column_bits = new long long int[size]{0};

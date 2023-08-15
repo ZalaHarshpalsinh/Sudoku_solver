@@ -1,0 +1,32 @@
+Instructions to use this Sudoku_solver:
+
+1) create a new file
+2) Enter the unsolved sudoku puzzle data in the file in below format
+
+
+                                                    Example:
+--------------------------                          ------------------------
+| size_of_grid           |                          |9                     |
+| ---------------        |  : Use 0 to              |3 0 6 5 0 8 4 0 0     |    Notes:
+| |             |        |    denote empty          |5 2 0 0 0 0 0 0 0     |    1)Make sure to enter only numeric data
+| | sudoku      |        |    cell                  |0 8 7 0 0 0 0 3 1     |    2)Make sure there are exactly (size*size)+1
+| |    puzzle   |        |                          |0 0 3 0 1 0 0 8 0     |      numbers are there no more no less
+| |             |        |                          |9 0 0 8 6 3 0 0 5     |    3)Posible grid_sizes = { 1, 4, 9, 16, 25, 36, 49, 64} 
+| |             |        |                          |0 5 0 0 9 0 6 0 0     |        3.1)Make sure size is a perfect square(only then it is a valid sudoku grid)
+| ---------------        |                          |1 3 0 0 0 0 2 5 0     |        3.2)Make sure 1<=size<=64
+|                        |                          |0 0 0 0 0 0 0 7 4     |    
+|                        |                          |0 0 5 2 0 6 3 0 0     |
+--------------------------                          ------------------------
+
+3) run this command in terminal
+    ./Sudoku_solver.exe your_file_name
+
+Note: replace  your_file_name with actual name of your file
+
+4) Wallah ! If your input was in right format than the program will produce the solution in the same file.
+    4.1) If you don't see any output in your file, check command line for error message.
+    4.2) If message is "This sudoku "This sudoku is unsolvable" then it means that it is not Posible to solve the given sudoku.
+    4.3) If message is "Input file is not in the correct format" then simply re-read this instructions, find what is wrong in your input and try again after correction.
+
+5) Enjoy
+
