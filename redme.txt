@@ -1,5 +1,7 @@
 Instructions to use this Sudoku_solver:
 
+Note: Command for compiling the code : g++ main.cpp sudoku.cpp -o Sudoku_solver.exe
+
 1) create a new file
 2) Enter the unsolved sudoku puzzle data in the file in below format
 
